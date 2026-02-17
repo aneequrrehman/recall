@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-mcp",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "Model Context Protocol (MCP) tool definitions for Recall. Add memory capabilities to Claude, Cursor, and other MCP-compatible AI assistants.",
   "type": "module",
   "main": "./dist/index.cjs",

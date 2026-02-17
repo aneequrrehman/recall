@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-ai-sdk",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "Vercel AI SDK integration for Recall. Add persistent memory to any AI model with a single wrapper function.",
   "type": "module",
   "main": "./dist/index.cjs",

@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-extractor-openai",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "OpenAI-powered memory extraction for Recall. Extract facts from conversations using GPT models with smart deduplication and consolidation.",
   "type": "module",
   "main": "./dist/index.cjs",

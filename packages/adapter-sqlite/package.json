@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-adapter-sqlite",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "SQLite database adapter for Recall. Store AI memories locally with zero configuration using better-sqlite3.",
   "type": "module",
   "main": "./dist/index.cjs",

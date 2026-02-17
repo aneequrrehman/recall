@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-adapter-mysql",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "MySQL database adapter for Recall. Store AI memories in your existing MySQL infrastructure with mysql2.",
   "type": "module",
   "main": "./dist/index.cjs",

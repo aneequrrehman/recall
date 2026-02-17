@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-mcp-server",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "Standalone MCP server for Recall. Give Claude, Cursor, and other AI assistants persistent memory with a single command.",
   "type": "module",
   "main": "./dist/index.cjs",

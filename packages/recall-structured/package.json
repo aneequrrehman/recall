@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-structured",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "Schema-based structured memory for AI applications. Define Zod schemas, let the LLM handle intent detection, data extraction, and CRUD operations with precise SQL queries.",
   "type": "module",
   "main": "./dist/index.cjs",

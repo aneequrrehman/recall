@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-embeddings-cohere",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "Cohere embeddings provider for Recall. Generate high-quality text embeddings using Cohere's embed models for semantic search and memory retrieval.",
   "type": "module",
   "main": "./dist/index.cjs",

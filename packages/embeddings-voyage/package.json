@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-embeddings-voyage",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "Voyage AI embeddings provider for Recall. Generate state-of-the-art text embeddings optimized for retrieval and semantic search.",
   "type": "module",
   "main": "./dist/index.cjs",

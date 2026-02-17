@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-embeddings-openai",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "OpenAI embeddings provider for Recall. Generate text embeddings using text-embedding-3-small, text-embedding-3-large, and other OpenAI models.",
   "type": "module",
   "main": "./dist/index.cjs",

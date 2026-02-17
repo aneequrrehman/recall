@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-adapter-postgresql",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "PostgreSQL database adapter for Recall with native pgvector support. Production-ready AI memory storage with vector similarity search.",
   "type": "module",
   "main": "./dist/index.cjs",

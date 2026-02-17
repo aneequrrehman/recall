@@ -1,6 +1,6 @@
 {
   "name": "@youcraft/recall-extractor-anthropic",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "Anthropic-powered memory extraction for Recall. Extract facts from conversations using Claude models with smart deduplication and consolidation.",
   "type": "module",
   "main": "./dist/index.cjs",
