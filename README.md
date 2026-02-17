@@ -2,7 +2,7 @@
   <img src=".github/assets/logo.svg" width="128" height="128" alt="Recall logo">
 </p>
 <h1 align="center">Recall</h1>
-<p align="center"><strong>AI memory layer that supports computations</strong></p>
+<p align="center"><strong>AI memory layer that lives in your stack</strong></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@youcraft/recall"><img src="https://img.shields.io/npm/v/@youcraft/recall.svg?style=flat-square" alt="npm version" /></a>
@@ -14,6 +14,43 @@
 Composable building blocks for adding persistent memory to AI applications.<br/>
 LLM-powered fact extraction, intelligent deduplication, vector search, and <strong>queryable structured memory</strong> — all in your existing database.
 </p>
+
+---
+
+## Quick Start
+
+```bash
+pnpm add @youcraft/recall @youcraft/recall-adapter-sqlite \
+  @youcraft/recall-embeddings-openai @youcraft/recall-extractor-openai
+```
+
+```typescript
+import { createMemory } from '@youcraft/recall'
+import { sqliteAdapter } from '@youcraft/recall-adapter-sqlite'
+import { openaiEmbeddings } from '@youcraft/recall-embeddings-openai'
+import { openaiExtractor } from '@youcraft/recall-extractor-openai'
+
+const memory = createMemory({
+  db: sqliteAdapter({ filename: 'memories.db' }),
+  embeddings: openaiEmbeddings({ apiKey: process.env.OPENAI_API_KEY! }),
+  extractor: openaiExtractor({ apiKey: process.env.OPENAI_API_KEY! }),
+})
+
+// Extract memories from a conversation
+await memory.extract(
+  `User: I'm a software engineer working at Acme Corp.
+   Assistant: Nice! What kind of projects do you work on?
+   User: Mostly backend stuff in TypeScript.`,
+  { userId: 'user_123' }
+)
+
+// Query relevant memories
+const memories = await memory.query('What does the user do for work?', {
+  userId: 'user_123',
+  limit: 5,
+})
+// => [{ content: "User is a software engineer at Acme Corp", ... }]
+```
 
 ---
 
@@ -70,48 +107,6 @@ Recall is a **library you import**, not a service you deploy. Pick the pieces yo
 - **Pluggable architecture** — Swap databases, embedding providers, and extractors
 - **TypeScript-first** — Full type safety with comprehensive interfaces
 - **Zero lock-in** — All data stays in your infrastructure
-
-## Quick Start
-
-### Installation
-
-```bash
-# Core + OpenAI providers + SQLite adapter
-pnpm add @youcraft/recall \
-  @youcraft/recall-embeddings-openai \
-  @youcraft/recall-extractor-openai \
-  @youcraft/recall-adapter-sqlite
-```
-
-### Basic Usage
-
-```typescript
-import { createMemory } from '@youcraft/recall'
-import { sqliteAdapter } from '@youcraft/recall-adapter-sqlite'
-import { openaiEmbeddings } from '@youcraft/recall-embeddings-openai'
-import { openaiExtractor } from '@youcraft/recall-extractor-openai'
-
-const memory = createMemory({
-  db: sqliteAdapter({ filename: 'memories.db' }),
-  embeddings: openaiEmbeddings({ apiKey: process.env.OPENAI_API_KEY! }),
-  extractor: openaiExtractor({ apiKey: process.env.OPENAI_API_KEY! }),
-})
-
-// Extract memories from a conversation
-await memory.extract(
-  `User: I'm a software engineer working at Acme Corp.
-   Assistant: Nice! What kind of projects do you work on?
-   User: Mostly backend stuff in TypeScript.`,
-  { userId: 'user_123' }
-)
-
-// Query relevant memories
-const memories = await memory.query('What does the user do for work?', {
-  userId: 'user_123',
-  limit: 5,
-})
-// => [{ content: "User is a software engineer at Acme Corp", ... }]
-```
 
 ## How Memory Consolidation Works
 
@@ -231,13 +226,6 @@ Visit [recall-docs-sand.vercel.app](https://recall-docs-sand.vercel.app/) for fu
 - [Structured Memory](https://recall-docs-sand.vercel.app/structured)
 - [Database Adapters](https://recall-docs-sand.vercel.app/database-adapters)
 - [Tutorials](https://recall-docs-sand.vercel.app/tutorials/nextjs-chatbot)
-
-## Disclaimer
-
-This software is provided "as is", without warranty of any kind. See the [MIT License](./LICENSE) for full terms.
-
-> **Note:** All packages are published under the `@youcraft` npm organization (e.g. `@youcraft/recall`, `@youcraft/recall-adapter-sqlite`). This is the npm scope used for this project — the repository itself is maintained independently. This project is under active development. Most of the code has been AI-generated and is being iteratively refined to establish consistent patterns and best practices. APIs may change between releases. Use in production at your own discretion.
-
 
 ## License
 
