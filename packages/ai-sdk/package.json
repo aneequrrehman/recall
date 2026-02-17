@@ -1,0 +1,63 @@
+{
+  "name": "@youcraft/recall-ai-sdk",
+  "version": "0.1.0",
+  "description": "Vercel AI SDK integration for Recall. Add persistent memory to any AI model with a single wrapper function.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@ai-sdk/provider": "^2.0.0",
+    "@youcraft/recall": "workspace:*",
+    "ai": "^5.0.0"
+  },
+  "devDependencies": {
+    "@ai-sdk/provider": "^2.0.0",
+    "@youcraft/recall": "workspace:*",
+    "ai": "^5.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "recall",
+    "ai",
+    "memory",
+    "llm",
+    "vercel",
+    "ai-sdk",
+    "nextjs",
+    "react",
+    "chatbot",
+    "streaming",
+    "conversational-ai",
+    "typescript"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aneequrrehman/recall#readme",
+  "bugs": {
+    "url": "https://github.com/aneequrrehman/recall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneequrrehman/recall.git",
+    "directory": "packages/ai-sdk"
+  }
+}

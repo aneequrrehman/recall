@@ -1,0 +1,59 @@
+{
+  "name": "@youcraft/recall-embeddings-voyage",
+  "version": "0.1.0",
+  "description": "Voyage AI embeddings provider for Recall. Generate state-of-the-art text embeddings optimized for retrieval and semantic search.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "voyageai": "^0.0.3-1"
+  },
+  "devDependencies": {
+    "@youcraft/recall": "workspace:*",
+    "voyageai": "^0.0.3-1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "recall",
+    "ai",
+    "memory",
+    "llm",
+    "embeddings",
+    "voyage",
+    "voyageai",
+    "text-embedding",
+    "vector-database",
+    "semantic-search",
+    "typescript"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aneequrrehman/recall#readme",
+  "bugs": {
+    "url": "https://github.com/aneequrrehman/recall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneequrrehman/recall.git",
+    "directory": "packages/embeddings-voyage"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "@youcraft/recall-extractor-anthropic",
+  "version": "0.1.0",
+  "description": "Anthropic-powered memory extraction for Recall. Extract facts from conversations using Claude models with smart deduplication and consolidation.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": "^0.52.0"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "@youcraft/recall": "workspace:*",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "recall",
+    "ai",
+    "memory",
+    "llm",
+    "extraction",
+    "anthropic",
+    "claude",
+    "fact-extraction",
+    "conversational-ai",
+    "chatbot",
+    "typescript"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aneequrrehman/recall#readme",
+  "bugs": {
+    "url": "https://github.com/aneequrrehman/recall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneequrrehman/recall.git",
+    "directory": "packages/extractor-anthropic"
+  }
+}

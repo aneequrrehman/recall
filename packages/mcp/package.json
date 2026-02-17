@@ -1,0 +1,60 @@
+{
+  "name": "@youcraft/recall-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol (MCP) tool definitions for Recall. Add memory capabilities to Claude, Cursor, and other MCP-compatible AI assistants.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@youcraft/recall": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@youcraft/recall": "workspace:*",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "recall",
+    "ai",
+    "memory",
+    "llm",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "windsurf",
+    "cline",
+    "tools",
+    "typescript"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aneequrrehman/recall#readme",
+  "bugs": {
+    "url": "https://github.com/aneequrrehman/recall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneequrrehman/recall.git",
+    "directory": "packages/mcp"
+  }
+}

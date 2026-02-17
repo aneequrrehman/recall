@@ -1,0 +1,36 @@
+# Dependencies
+node_modules
+pnpm-lock.yaml
+
+# Build outputs
+dist
+build
+.next
+.turbo
+.astro
+out
+*.tsbuildinfo
+
+# Coverage
+coverage
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# IDE
+.idea
+.vscode
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+!.env.example

@@ -1,0 +1,22 @@
+{
+  "name": "recall",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "test:run": "vitest run",
+    "typecheck": "turbo typecheck",
+    "publish-packages": "pnpm -r publish --access public"
+  },
+  "devDependencies": {
+    "prettier": "3.7.4",
+    "turbo": "^2.6.3",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "packageManager": "pnpm@9.0.0"
+}

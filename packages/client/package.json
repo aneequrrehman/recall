@@ -1,0 +1,76 @@
+{
+  "name": "@youcraft/recall-client",
+  "version": "0.1.0",
+  "description": "Official client SDK for Recall. Connect to hosted Recall API or self-hosted instances with full TypeScript support and Vercel AI SDK integration.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./ai-sdk": {
+      "types": "./dist/ai-sdk.d.ts",
+      "import": "./dist/ai-sdk.js",
+      "require": "./dist/ai-sdk.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@youcraft/recall-ai-sdk": "workspace:*"
+  },
+  "peerDependencies": {
+    "@ai-sdk/provider": "^2.0.0",
+    "ai": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@ai-sdk/provider": {
+      "optional": true
+    },
+    "ai": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@ai-sdk/provider": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "ai": "^5.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "recall",
+    "ai",
+    "memory",
+    "llm",
+    "client",
+    "sdk",
+    "api",
+    "vercel",
+    "ai-sdk",
+    "typescript"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aneequrrehman/recall#readme",
+  "bugs": {
+    "url": "https://github.com/aneequrrehman/recall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneequrrehman/recall.git",
+    "directory": "packages/client"
+  }
+}

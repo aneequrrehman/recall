@@ -1,0 +1,61 @@
+{
+  "name": "@youcraft/recall-extractor-openai",
+  "version": "0.1.0",
+  "description": "OpenAI-powered memory extraction for Recall. Extract facts from conversations using GPT models with smart deduplication and consolidation.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "openai": "^4.0.0",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@youcraft/recall": "workspace:*",
+    "openai": "^4.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0",
+    "zod": "^3.24.0"
+  },
+  "keywords": [
+    "recall",
+    "ai",
+    "memory",
+    "llm",
+    "extraction",
+    "openai",
+    "gpt",
+    "fact-extraction",
+    "conversational-ai",
+    "chatbot",
+    "typescript"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aneequrrehman/recall#readme",
+  "bugs": {
+    "url": "https://github.com/aneequrrehman/recall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneequrrehman/recall.git",
+    "directory": "packages/extractor-openai"
+  }
+}

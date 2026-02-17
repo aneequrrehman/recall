@@ -1,0 +1,69 @@
+{
+  "name": "@youcraft/recall-mcp-server",
+  "version": "0.1.0",
+  "description": "Standalone MCP server for Recall. Give Claude, Cursor, and other AI assistants persistent memory with a single command.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "recall-mcp": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@youcraft/recall": "workspace:*",
+    "@youcraft/recall-adapter-sqlite": "workspace:*",
+    "@youcraft/recall-embeddings-openai": "workspace:*",
+    "@youcraft/recall-extractor-openai": "workspace:*",
+    "@youcraft/recall-mcp": "workspace:*",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "recall",
+    "ai",
+    "memory",
+    "llm",
+    "mcp",
+    "model-context-protocol",
+    "server",
+    "cli",
+    "claude",
+    "cursor",
+    "windsurf",
+    "cline",
+    "typescript"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aneequrrehman/recall#readme",
+  "bugs": {
+    "url": "https://github.com/aneequrrehman/recall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneequrrehman/recall.git",
+    "directory": "packages/mcp-server"
+  }
+}
