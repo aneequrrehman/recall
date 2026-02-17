@@ -37,8 +37,11 @@ describe('openaiExtractor', () => {
   })
 
   describe('initialization', () => {
-    it('creates OpenAI client with provided API key', () => {
-      openaiExtractor({ apiKey: 'test-api-key' })
+    it('creates OpenAI client with provided API key', async () => {
+      mockBetaChatCompletionsParse.mockResolvedValue(mockParsedResponse({ memories: [] }))
+
+      const provider = openaiExtractor({ apiKey: 'test-api-key' })
+      await provider.extract('test')
 
       expect(OpenAI).toHaveBeenCalledWith({ apiKey: 'test-api-key' })
     })
@@ -90,7 +93,6 @@ describe('openaiExtractor', () => {
             },
             { role: 'user', content: 'User said they live in NYC' },
           ],
-          temperature: 0,
         })
       )
     })

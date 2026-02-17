@@ -21,8 +21,13 @@ describe('openaiEmbeddings', () => {
   })
 
   describe('initialization', () => {
-    it('creates OpenAI client with provided API key', () => {
-      openaiEmbeddings({ apiKey: 'test-api-key' })
+    it('creates OpenAI client with provided API key', async () => {
+      mockEmbeddingsCreate.mockResolvedValue({
+        data: [{ embedding: [0.1, 0.2, 0.3] }],
+      })
+
+      const provider = openaiEmbeddings({ apiKey: 'test-api-key' })
+      await provider.embed('test')
 
       expect(OpenAI).toHaveBeenCalledWith({ apiKey: 'test-api-key' })
     })

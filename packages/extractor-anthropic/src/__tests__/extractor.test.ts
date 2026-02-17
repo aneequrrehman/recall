@@ -49,7 +49,7 @@ describe('anthropicExtractor', () => {
 
       expect(mockCreate).toHaveBeenCalledWith(
         expect.objectContaining({
-          model: 'claude-3-5-haiku-20241022',
+          model: 'claude-3-5-haiku-latest',
           tools: expect.any(Array),
           tool_choice: { type: 'tool', name: 'extract_memories' },
         })
