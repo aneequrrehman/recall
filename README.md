@@ -1,3 +1,6 @@
+<p align="center">
+  <img src=".github/assets/logo.svg" width="128" height="128" alt="Recall logo">
+</p>
 <h1 align="center">Recall</h1>
 <p align="center"><strong>AI memory layer that supports computations</strong></p>
 
