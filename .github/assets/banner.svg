@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320">
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#059669"/>
+<stop offset="100%" stop-color="#047857"/>
+</linearGradient>
+</defs>
+
+<!-- Background -->
+<rect width="1280" height="320" rx="20" ry="20" fill="url(#bg)"/>
+
+<!-- Logo (scaled from 512x512 to ~250x250, positioned left with padding) -->
+<g transform="translate(48, 35) scale(0.488)">
+<!-- Outer hexagon -->
+<polygon points="256,56 431,157 431,355 256,456 81,355 81,157" fill="none" stroke="white" stroke-width="10" opacity="0.25"/>
+
+<!-- Inner hexagon -->
+<polygon points="256,126 366,192 366,320 256,386 146,320 146,192" fill="none" stroke="white" stroke-width="8" opacity="0.5"/>
+
+<!-- Core hexagon (solid) -->
+<polygon points="256,196 306,225 306,283 256,312 206,283 206,225" fill="white" opacity="0.9"/>
+
+<!-- Center dot -->
+<polygon points="256,234 272,243 272,265 256,274 240,265 240,243" fill="#059669"/>
+
+<!-- Circuit traces - top -->
+<line x1="256" y1="196" x2="256" y2="126" stroke="white" stroke-width="6" opacity="0.7"/>
+<line x1="256" y1="126" x2="256" y2="56" stroke="white" stroke-width="4" opacity="0.3"/>
+
+<!-- Circuit traces - top right -->
+<line x1="306" y1="225" x2="366" y2="192" stroke="white" stroke-width="6" opacity="0.7"/>
+<line x1="366" y1="192" x2="431" y2="157" stroke="white" stroke-width="4" opacity="0.3"/>
+
+<!-- Circuit traces - bottom right -->
+<line x1="306" y1="283" x2="366" y2="320" stroke="white" stroke-width="6" opacity="0.7"/>
+<line x1="366" y1="320" x2="431" y2="355" stroke="white" stroke-width="4" opacity="0.3"/>
+
+<!-- Circuit traces - bottom -->
+<line x1="256" y1="312" x2="256" y2="386" stroke="white" stroke-width="6" opacity="0.7"/>
+<line x1="256" y1="386" x2="256" y2="456" stroke="white" stroke-width="4" opacity="0.3"/>
+
+<!-- Circuit traces - bottom left -->
+<line x1="206" y1="283" x2="146" y2="320" stroke="white" stroke-width="6" opacity="0.7"/>
+<line x1="146" y1="320" x2="81" y2="355" stroke="white" stroke-width="4" opacity="0.3"/>
+
+<!-- Circuit traces - top left -->
+<line x1="206" y1="225" x2="146" y2="192" stroke="white" stroke-width="6" opacity="0.7"/>
+<line x1="146" y1="192" x2="81" y2="157" stroke="white" stroke-width="4" opacity="0.3"/>
+
+<!-- Node diamonds at mid-hex vertices -->
+<polygon points="256,118 264,126 256,134 248,126" fill="white" opacity="0.8"/>
+<polygon points="370,188 378,192 370,200 362,192" fill="white" opacity="0.8"/>
+<polygon points="370,316 378,320 370,328 362,320" fill="white" opacity="0.8"/>
+<polygon points="256,378 264,386 256,394 248,386" fill="white" opacity="0.8"/>
+<polygon points="142,316 150,320 142,328 134,320" fill="white" opacity="0.8"/>
+<polygon points="142,188 150,192 142,200 134,192" fill="white" opacity="0.8"/>
+</g>
+
+<!-- Title -->
+<text x="370" y="168" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="80" font-weight="700" fill="white" letter-spacing="-2">Recall</text>
+
+<!-- Subtitle -->
+<text x="374" y="212" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" fill="white" opacity="0.75" font-weight="400">AI memory layer that lives in your stack</text>
+</svg>

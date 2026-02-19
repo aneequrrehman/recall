@@ -1,8 +1,6 @@
 <p align="center">
-  <img src=".github/assets/logo.svg" width="128" height="128" alt="Recall logo">
+  <img src=".github/assets/banner.svg" alt="Recall — AI memory layer that lives in your stack">
 </p>
-<h1 align="center">Recall</h1>
-<p align="center"><strong>AI memory layer that lives in your stack</strong></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@youcraft/recall"><img src="https://img.shields.io/npm/v/@youcraft/recall.svg?style=flat-square" alt="npm version" /></a>
