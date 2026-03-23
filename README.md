@@ -15,6 +15,10 @@ LLM-powered fact extraction, intelligent deduplication, vector search, and <stro
 
 ---
 
+> **Note:** This project is not actively maintained. I built the initial version as a proof of concept. Since then, I started working on a full product based on the structured memory approach. I'll come back to these packages soon.
+
+---
+
 ## Quick Start
 
 ```bash
